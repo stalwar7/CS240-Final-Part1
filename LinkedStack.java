@@ -17,6 +17,7 @@ public class LinkedStack<T> implements StackInterface<T> {
 			head = new Node<T>(newEntry, oldNode);
 			index++;
 		}
+		index++;
 
 	}
 
@@ -27,6 +28,7 @@ public class LinkedStack<T> implements StackInterface<T> {
 		}
 		else
 		{
+			index--;
 			Node<T> temp = head;
 			head = head.getNext();
 			return temp.getData();
@@ -45,9 +47,13 @@ public class LinkedStack<T> implements StackInterface<T> {
 		return (head == null);
 	}
 
-	public void clear() {
-		
+	public void clear() {		
 		head = null;
+	}
+	
+	public int getSize()
+	{
+		return index;
 	}
 
 }

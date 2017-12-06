@@ -2,7 +2,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.ArrayList;
 
-public class LinkedDictionary<K,V> implements DictionaryInterface<K,V> {
+public class LinkedDictionary<K extends Comparable<? super K>, V> implements DictionaryInterface<K, V> {
 
 	private int size;
 	private DNode<K,V> head;
@@ -52,8 +52,8 @@ public class LinkedDictionary<K,V> implements DictionaryInterface<K,V> {
 					temp = temp.getNext();
 				}
 				
-				DDNode<K, V> newNode = new DDNode<K, V>(key, value);
-				DDNode<K, V> temp2 = temp.getNext();
+				DNode<K, V> newNode = new DNode<K, V>(key, value);
+				DNode<K, V> temp2 = temp.getNext();
 				temp.setNext(newNode);
 				newNode.setNext(temp2);
 			}
