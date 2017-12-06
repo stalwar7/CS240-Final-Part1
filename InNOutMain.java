@@ -90,14 +90,11 @@ public class InNOutMain {
 					customersLost += customerLine - 50;
 					customerLine = 50;
 				}
-
 				for (int i = 0; i < customerLine; i++) {
-					// System.out.println(i);
 					numCustomer.enqueue(1 + random.nextInt(6));
 				}
 
-				while (!numCustomer.isEmpty()) // empty the queue/numCustomer
-												// ordering
+				while (!numCustomer.isEmpty()) 
 				{
 					orderNum = numCustomer.dequeue();
 					try {
@@ -290,7 +287,7 @@ public class InNOutMain {
 			newCheese.push(cheese.pop());
 		}
 		ship = random.nextInt(4) + date + 3;
-		for (int i = 0; i < random.nextInt(300) + 700; i++) {
+		for (int i = 0; i < random.nextInt(500) + 700; i++) {
 			int ingredient = random.nextInt(6);
 
 			switch (ingredient) {
