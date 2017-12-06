@@ -26,6 +26,7 @@ public class InNOutMain {
 	private static boolean noFood = false;
 
 	public static void main(String[] args) throws EmptyQueueException {
+		//make burger
 		LinkedList<String> burger = new LinkedList<String>();
 		burger.add("Bun");
 		burger.add("Patty");
@@ -71,8 +72,8 @@ public class InNOutMain {
 		int numCustomers = 1;
 		int orderNum = 0;
 		startShipment();
-		ArrayQueue<Integer> numCustomer = new ArrayQueue<Integer>(50); //only 50 ppl allowed per queue
-		LinkedDictionary<Integer, Integer> numOrders = new LinkedDictionary<Integer, Integer>(); //account for difforders
+		ArrayQueue<Integer> numCustomer = new ArrayQueue<Integer>(50); //only 50 ppl allowed per queue - rest get removed
+		LinkedDictionary<Integer, Integer> numOrders = new LinkedDictionary<Integer, Integer>(); //account for diff orders
 		while (date <= 1231) {
 			if (ship == date) {
 				startShipment();
@@ -95,6 +96,7 @@ public class InNOutMain {
 				while (!numCustomer.isEmpty()) 
 				{
 					orderNum = numCustomer.dequeue();
+					//orderNum = random.nextInt(6) +1;
 					try {
 						switch (orderNum) {
 						case 1:
