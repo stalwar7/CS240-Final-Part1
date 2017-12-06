@@ -26,7 +26,6 @@ public class InNOutMain {
 	private static boolean noFood = false;
 
 	public static void main(String[] args) throws EmptyQueueException {
-
 		LinkedList<String> burger = new LinkedList<String>();
 		burger.add("Bun");
 		burger.add("Patty");
@@ -78,7 +77,6 @@ public class InNOutMain {
 			if (ship == date) {
 				startShipment();
 			}
-
 			time = 10;
 			numCustomers = 1;
 			resetData();
@@ -165,6 +163,8 @@ public class InNOutMain {
 				}
 				time++;
 			}
+			//how do I print out dictionary?? - iterators?
+			
 			System.out.println("December " + (date % 100));
 			System.out.println("Number of customers lost : " + customersLost);
 			checkExpiration();
