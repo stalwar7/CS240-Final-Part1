@@ -6,6 +6,7 @@ public class LinkedStack<T> implements StackInterface<T> {
 
 	public LinkedStack() {
 		head = null;
+		index = 0;
 	}
 
 	public void push(T newEntry) {
@@ -13,12 +14,9 @@ public class LinkedStack<T> implements StackInterface<T> {
 			head = new Node<T>(newEntry);
 			index++;
 		} else {
-			Node<T> oldNode = head;
-			head = new Node<T>(newEntry, oldNode);
+			head = new Node<T>(newEntry, head);
 			index++;
 		}
-		index++;
-
 	}
 
 	public T pop() {
@@ -49,6 +47,7 @@ public class LinkedStack<T> implements StackInterface<T> {
 
 	public void clear() {		
 		head = null;
+		index = 0;
 	}
 	
 	public int getSize()
