@@ -1,10 +1,8 @@
-import java.util.EmptyStackException;
 import java.util.LinkedList;
 import java.util.Map;
 import java.util.HashMap;
 import java.util.Queue;
 import java.util.Random;
-import java.util.Stack;
 
 public class Main {
 	private static LinkedStack<Integer> bun = new LinkedStack<Integer>();
