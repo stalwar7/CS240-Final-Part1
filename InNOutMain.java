@@ -71,7 +71,8 @@ public class InNOutMain {
 		int customerLine = 0;
 		int numCustomers = 1;
 		int orderNum = 0;
-		startShipment();
+		//startShipment();
+		ship = date;
 		ArrayQueue<Integer> numCustomer = new ArrayQueue<Integer>(50); //only 50 ppl allowed per queue - rest get removed
 		LinkedDictionary<Integer, Integer> numOrders = new LinkedDictionary<Integer, Integer>(); //account for diff orders
 		while (date <= 1231) {
